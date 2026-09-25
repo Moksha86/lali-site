@@ -73,14 +73,15 @@ nav a::after{
 nav a:hover{color:var(--teal)}
 nav a:hover::after{width:100%}
 
-/* ===== HERO BANNER (витрина сайта) ===== */
+/* ===== HERO BANNER (адаптивный: десктоп / мобильный) ===== */
 .hero-banner{
   position:relative;
   height:clamp(300px,46vw,540px);
   overflow:hidden;
   background:var(--mint);
 }
-.hero-banner img{
+.hero-banner picture,
+.hero-banner picture img{
   position:absolute;inset:0;
   width:100%;height:100%;
   object-fit:cover;object-position:center center;
@@ -109,14 +110,12 @@ nav a:hover::after{width:100%}
   animation:bounceHint 2s ease-in-out infinite;
   transition:all .3s;
   z-index:2;
+  text-decoration:none;
 }
 .scroll-hint:hover{background:var(--teal);color:#fff;transform:translateX(-50%) scale(1.08)}
 @keyframes bounceHint{
   0%,100%{margin-bottom:0}
   50%{margin-bottom:8px}
-}
-@media(max-width:760px){
-  .hero-banner img{object-position:26% center}
 }
 
 /* ===== TICKER (бегущая строка направлений) ===== */
@@ -568,6 +567,13 @@ footer.site .disc{
   .person{flex-direction:column;text-align:center}
   .qr-box{margin-left:0}
   .cta-panel{padding:40px 24px}
+  /* Мобильный баннер: квадратный, без обрезания */
+  .hero-banner{height:auto;min-height:clamp(280px,70vw,440px)}
+  .hero-banner picture img{
+    object-position:center center;
+    object-fit:contain;
+    background:var(--mint);
+  }
 }
 </style>
 </head>
@@ -586,9 +592,16 @@ footer.site .disc{
   </div>
 </header>
 
-<!-- ===== ВИТРИНА: БАННЕР «ДОБРО ПОЖАЛОВАТЬ» ===== -->
+<!-- ===== АДАПТИВНЫЙ БАННЕР (десктоп / мобильный) ===== -->
 <div class="hero-banner">
-  <img src="assets/img/hero-banner.jpg" alt="LALI — добро пожаловать: помощник Сергей на связи" fetchpriority="high">
+  <picture>
+    <!-- Мобильный: квадратный 1080×1080 для экранов ≤760px -->
+    <source media="(max-width: 760px)" srcset="assets/img/hero-banner-mobile.jpg">
+    <!-- Десктоп: горизонтальный 1920×600 -->
+    <source media="(min-width: 761px)" srcset="assets/img/hero-banner.jpg">
+    <!-- Фолбэк для старых браузеров -->
+    <img src="assets/img/hero-banner.jpg" alt="LALI — добро пожаловать: помощник Сергей на связи" fetchpriority="high">
+  </picture>
   <div class="banner-shade"></div>
   <a class="scroll-hint" href="#about" aria-label="Листайте вниз">
     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
