@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LALI — врач остеопат-онколог, 4 поколение | Официальный сайт</title>
+<meta name="description" content="LALI — дипломированный специалист, врач остеопат-онколог в четвёртом поколении. >20 лет практики, >3000 пациентов. Остеопатическое сопровождение онкологических пациентов взрослых и детей. Лицензия DOH-MD-2020-847392.">
+<meta property="og:title" content="LALI — врач остеопат-онколог, 4 поколение">
+<meta property="og:description" content="Остеопатическое сопровождение онкологических пациентов. Взрослые и дети. Работа совместно с лечащим врачом.">
+<meta property="og:image" content="https://moksha86.github.io/lali-site/assets/img/logo-lali.png">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FAFCFB;--ink:#0D3B4F;--teal:#1FA79B;--mint:#E4F2EF;--apricot:#E8896A;--line:rgba(13,59,79,.16)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.6 'Source Sans 3',sans-serif}
+h1,h2,h3{font-family:'Manrope',sans-serif;font-weight:800;line-height:1.1}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--paper);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
+header img{height:48px}
+nav a{color:var(--ink);text-decoration:none;margin-left:22px;font-weight:600;font-size:15px}
+nav a:hover{color:var(--teal)}
+.btn{display:inline-block;background:var(--ink);color:#fff;padding:15px 26px;text-decoration:none;font-weight:700;font-size:16px;border-radius:2px}
+.btn-teal{background:var(--teal)}
+.btn-ghost{background:transparent;border:1px solid var(--ink);color:var(--ink)}
+.btn:hover{opacity:.88}
+.hero{padding:84px 0 64px}
+.overline{font-family:'IBM Plex Mono',monospace;color:var(--teal);font-size:14px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:18px}
+.hero h1{font-size:clamp(2.3rem,6vw,4.3rem);max-width:16ch}
+.hero h1 em{font-style:normal;color:var(--teal)}
+.hero p.lead{font-size:20px;max-width:56ch;margin:26px 0 34px}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px}
+.badge{font-family:'IBM Plex Mono',monospace;font-size:14px;border:1px solid var(--line);padding:7px 12px;border-radius:2px}
+.badge.hot{border-color:var(--apricot);color:var(--apricot)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+section{padding:64px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(1.7rem,3.6vw,2.6rem);margin-bottom:30px;max-width:22ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{border:1px solid var(--line);padding:24px;border-radius:2px;background:#fff}
+.card .idx{font-family:'IBM Plex Mono',monospace;color:var(--teal);font-size:13px;display:block;margin-bottom:10px}
+.card h3{font-size:18px;margin-bottom:10px}
+.card p{font-size:15px}
+.kids{background:var(--mint);border:1px solid var(--teal);padding:34px;border-radius:2px;margin-top:26px}
+.kids h3{font-size:22px;margin-bottom:8px}
+.kids .grid{margin-top:22px}
+.kids .card{background:var(--paper)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px}
+.step{border-top:2px solid var(--teal);padding-top:16px}
+.step .n{font-family:'IBM Plex Mono',monospace;font-size:34px;color:var(--teal)}
+.step h3{font-size:17px;margin:8px 0}
+.step p{font-size:15px}
+blockquote{border-left:3px solid var(--teal);padding:6px 0 6px 20px;margin:0 0 22px;font-size:17px}
+blockquote footer{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--teal);margin-top:8px}
+.license{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.license img{width:100%;border:1px solid var(--line);border-radius:2px}
+.person{display:flex;gap:20px;align-items:center;border:1px solid var(--line);background:#fff;padding:20px;border-radius:2px;margin-top:26px;max-width:560px}
+.person img{width:110px;height:110px;object-fit:cover;border-radius:2px;border:1px solid var(--teal)}
+.person h3{font-size:19px}
+.person p{font-size:15px;margin-top:6px}
+@media(max-width:760px){.license{grid-template-columns:1fr}nav{display:none}}
+.cta-panel{background:var(--mint);padding:52px 34px;border-radius:2px}
+.cta-panel h2{margin-bottom:14px}
+.cta-panel .mono{font-size:clamp(1.4rem,4vw,2.2rem);color:var(--teal);display:block;margin:18px 0}
+footer.site{border-top:1px solid var(--line);padding:30px 0 44px;font-family:'IBM Plex Mono',monospace;font-size:13px}
+footer.site .disc{color:var(--apricot);margin-top:10px}
+.pulse{display:block;width:100%;height:26px;margin:8px 0}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img src="assets/img/logo-lali.png" alt="LALI — логотип клиники">
+    <nav>
+      <a href="#about">О враче</a><a href="#license">Лицензия</a>
+      <a href="#spec">Специализация</a><a href="#path">Путь к приёму</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <div class="overline">Официальный информационный сайт · для пациентов</div>
+  <h1>LALI — дипломированный специалист, врач <em>остеопат-онколог</em>, 4 поколение</h1>
+  <div class="badges">
+    <span class="badge">&gt;20 лет практики</span>
+    <span class="badge">&gt;3000 пациентов</span>
+    <span class="badge">Университет Мохаммеда бин Заида (ОАЭ)</span>
+    <span class="badge">Лицензия DOH-MD-2020-847392</span>
+    <span class="badge hot">Взрослые и дети</span>
+  </div>
+  <p class="lead">Остеопатическое сопровождение онкологических пациентов всех форм и стадий, включая IV. Авторские протоколы диагностики и восстановления, унаследованные и развитые внутри династии. Работа ведётся совместно с лечащим врачом и не заменяет назначенную терапию.</p>
+  <div class="cta-row">
+    <!-- ЗАМЕНИ LaliCareBot на реальный юзернейм бота (3 места в файле) -->
+    <a class="btn btn-teal" href="https://t.me/LaliCareBot?start=booking">📅 Записаться на приём</a>
+    <a class="btn" href="https://t.me/LaliCareBot">💬 Написать в Telegram</a>
+    <a class="btn btn-ghost" href="assets/docs/lali-brochure.pdf" download>📄 Скачать буклет (PDF)</a>
+  </div>
+</div>
+
+<svg class="pulse" viewBox="0 0 1200 26" preserveAspectRatio="none"><path d="M0 13 H480 l14 -9 l12 18 l12 -14 l10 5 H1200" fill="none" stroke="#1FA79B" stroke-width="1.5"/></svg>
+
+<section id="about"><div class="wrap">
+  <div class="overline">Династия</div>
+  <h2>Четыре поколения остеопатов. Руки врача, академические знания и медицинские данные — в одном подходе.</h2>
+  <div class="grid">
+    <div class="card"><span class="idx">01</span><h3>Династия</h3><p>Четвёртое поколение остеопатической практики. Опыт, передаваемый из семьи в семью.</p></div>
+    <div class="card"><span class="idx">02</span><h3>Академическая школа</h3><p>Университет Мохаммеда бин Заида (ОАЭ). Фундаментальное образование и современная научная база.</p></div>
+    <div class="card"><span class="idx">03</span><h3>Индивидуальный протокол</h3><p>Авторские протоколы диагностики и восстановления с учётом особенностей каждого пациента.</p></div>
+    <div class="card"><span class="idx">04</span><h3>Объективная удалённая диагностика</h3><p>Анализ медицинских данных, анализов и записей пациента до очной встречи.</p></div>
+  </div>
+</div></section>
+
+<section id="license"><div class="wrap">
+  <div class="overline">Образование и лицензия</div>
+  <h2>Фундамент академических знаний и официальное право на медицинскую деятельность</h2>
+  <div class="license">
+    <div>
+      <p><strong>Образование:</strong> ОАЭ, Университет Мохаммеда бин Заида. Полученное образование обеспечивает глубокую базу знаний в области медицины, современных методов диагностики и подходов к лечению.</p>
+      <p style="margin-top:14px"><strong>Лицензия № DOH-MD-2020-847392</strong> — Департамент здравоохранения Абу-Даби. Официальное право на осуществление медицинской деятельности в ОАЭ.</p>
+      <p class="mono" style="margin-top:14px;color:var(--teal)">Dr. Lali Kikabidze · General Practitioner · Specialist</p>
+    </div>
+    <img src="assets/img/license-doh.jpg" alt="Медицинская лицензия DOH-MD-2020-847392, Department of Health Abu Dhabi">
+  </div>
+</div></section>
+
+<section id="spec"><div class="wrap">
+  <div class="overline">Раздел 05–06</div>
+  <h2>Заболевания и состояния</h2>
+  <div class="grid">
+    <div class="card"><span class="idx">05.1</span><h3>Онкология всех форм и стадий</h3><p>Сопровождение пациентов всех форм и стадий, включая IV: поддержка качества жизни, восстановления и переносимости терапии. Возможно во время и после основного лечения.</p></div>
+    <div class="card"><span class="idx">05.2</span><h3>Саркомы и меланомы</h3><p>Остеопатическая поддержка в рамках комплексного маршрута, совместно с лечащим онкологом.</p></div>
+    <div class="card"><span class="idx">05.3</span><h3>Неврологические нарушения</h3><p>Поддержка нервной системы: работа с напряжением, сном и последствиями терапии.</p></div>
+    <div class="card"><span class="idx">05.4</span><h3>Тяжёлые состояния</h3><p>Работа проводится комплексно и совместно с лечащим врачом. Остеопатический подход не заменяет назначенную терапию.</p></div>
+  </div>
+  <div class="kids">
+    <h3>Дети: отдельный маршрут</h3>
+    <p>Остеопатическая поддержка развития, тонуса, осанки, сна и нервной системы.</p>
+    <div class="grid">
+      <div class="card"><span class="idx">06.1</span><h3>Детская онкология</h3><p>Сопровождение в рамках комплексного маршрута ребёнка: поддержка тонуса, сна, питания и переносимости терапии, восстановление во время и после основного лечения. Только совместно с лечащим онкологом.</p></div>
+      <div class="card"><span class="idx">06.2</span><h3>ЗПР · РАС · ДЦП · СДВГ</h3><p>Поддержка развития и регуляции нервной системы: работа с тонусом, сном, режимом и сенсорной интеграцией, индивидуальный протокол с учётом маршрута каждого ребёнка.</p></div>
+      <div class="card"><span class="idx">06.3</span><h3>Осанка и сколиоз</h3><p>Наблюдение и поддержка осанки, тонуса и развития; работа со сколиозом в рамках индивидуального протокола, согласованно с лечащим врачом.</p></div>
+      <div class="card"><span class="idx">06.4</span><h3>Сон и нервная система</h3><p>Восстановление сна и отдыха по естественным ритмам организма; поддержка нервной системы в периоды стресса, терапии и восстановления.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="path"><div class="wrap">
+  <div class="overline">Как устроен путь к приёму</div>
+  <h2>Четыре шага до первой встречи</h2>
+  <div class="steps">
+    <div class="step"><div class="n">01</div><h3>Сообщение помощнику</h3><p>Первое сообщение помощнику. Начать можно с короткого описания ситуации.</p></div>
+    <div class="step"><div class="n">02</div><h3>Анализы</h3><p>Сбор медицинских записей и анализов крови. Не нужно везти документы — достаточно фото и анализов.</p></div>
+    <div class="step"><div class="n">03</div><h3>Удалённая диагностика</h3><p>Экспертный анализ предоставленных медицинских данных. Предварительная оценка подготавливает очную консультацию.</p></div>
+    <div class="step"><div class="n">04</div><h3>Очный приём</h3><p>Приём и оценка в Краснодаре. Рекомендации формируются с учётом состояния и основного лечения.</p></div>
+  </div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+  <div class="overline">Истории пациентов</div>
+  <h2>Почему ей доверяют</h2>
+  <blockquote>«Благодарю за внимательное отношение и профессиональный подход.»<footer>— Елена П.</footer></blockquote>
+  <blockquote>«Очень ценно, что учитывается весь медицинский путь и анализы. Спасибо!»<footer>— Игорь К.</footer></blockquote>
+  <blockquote>«Чувствуется опыт и забота. Большое спасибо за поддержку.»<footer>— Анна С.</footer></blockquote>
+  <p>Выбирая Lali, вы выбираете не просто врача, а целую систему профессионального опыта, знаний и заботы о каждом пациенте.</p>
+</div></section>
+
+<section id="contacts"><div class="wrap">
+  <div class="cta-panel">
+    <div class="overline">Начните с одного сообщения</div>
+    <h2>Запись и консультации — через Telegram</h2>
+    <p>г. Краснодар, КП «Золотой город».</p>
+    <span class="mono">+7 (900) 353-53-53</span>
+    <div class="cta-row">
+      <a class="btn btn-teal" href="https://t.me/LaliCareBot?start=booking">📅 Записаться в боте</a>
+      <a class="btn" href="https://t.me/LaliCareBot">💬 Telegram помощника</a>
+      <a class="btn btn-ghost" href="assets/docs/lali-brochure.pdf" download>📄 PDF-буклет</a>
+    </div>
+  </div>
+  <div class="person">
+    <img src="assets/img/sergey-assistant.jpg" alt="Помощник Сергей">
+    <div>
+      <h3>Помощник Сергей</h3>
+      <p>Ваш первый контакт: ответит на вопросы, подскажет, с чего начать, и подберёт удобное время приёма. WhatsApp · Telegram.</p>
+    </div>
+  </div>
+</div></section>
+
+<footer class="site"><div class="wrap">
+  LALI — дипломированный специалист, врач остеопат-онколог, 4 поколение.<br>
+  Образование: Университет Мохаммеда бин Заида (ОАЭ) · Лицензия № DOH-MD-2020-847392
+  <div class="disc">ИМЕЮТСЯ ПРОТИВОПОКАЗАНИЯ. НЕОБХОДИМА КОНСУЛЬТАЦИЯ СПЕЦИАЛИСТА.</div>
+</div></footer>
+
+</body>
+</html>
