@@ -7,7 +7,7 @@
 <meta name="description" content="LALI — дипломированный специалист, врач остеопат-онколог в четвёртом поколении. >20 лет практики, >3000 пациентов. Остеопатическое сопровождение онкологических пациентов взрослых и детей. Лицензия DOH-MD-2020-847392.">
 <meta property="og:title" content="LALI — врач остеопат-онколог, 4 поколение">
 <meta property="og:description" content="Остеопатическое сопровождение онкологических пациентов. Взрослые и дети. Работа совместно с лечащим врачом.">
-<meta property="og:image" content="https://moksha86.github.io/lali-site/assets/img/logo-lali.png">
+<meta property="og:image" content="https://moksha86.github.io/lali-site/assets/img/hero-banner.jpg">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
 <link rel="apple-touch-icon" href="assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,6 +73,77 @@ nav a::after{
 nav a:hover{color:var(--teal)}
 nav a:hover::after{width:100%}
 
+/* ===== HERO BANNER (витрина сайта) ===== */
+.hero-banner{
+  position:relative;
+  height:clamp(300px,46vw,540px);
+  overflow:hidden;
+  background:var(--mint);
+}
+.hero-banner img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;object-position:center center;
+  animation:kenburns 22s ease-in-out infinite alternate;
+}
+@keyframes kenburns{
+  0%{transform:scale(1) translateY(0)}
+  100%{transform:scale(1.07) translateY(-14px)}
+}
+.banner-shade{
+  position:absolute;inset:0;
+  background:linear-gradient(to top, var(--paper) 0%, rgba(250,252,251,0) 26%);
+  pointer-events:none;
+}
+.scroll-hint{
+  position:absolute;left:50%;bottom:16px;
+  transform:translateX(-50%);
+  width:44px;height:44px;border-radius:50%;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+  border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--teal);
+  box-shadow:var(--shadow-md);
+  animation:bounceHint 2s ease-in-out infinite;
+  transition:all .3s;
+  z-index:2;
+}
+.scroll-hint:hover{background:var(--teal);color:#fff;transform:translateX(-50%) scale(1.08)}
+@keyframes bounceHint{
+  0%,100%{margin-bottom:0}
+  50%{margin-bottom:8px}
+}
+@media(max-width:760px){
+  .hero-banner img{object-position:26% center}
+}
+
+/* ===== TICKER (бегущая строка направлений) ===== */
+.ticker{
+  background:#fff;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+  padding:12px 0;
+}
+.ticker-track{
+  display:flex;width:max-content;
+  animation:marquee 38s linear infinite;
+}
+.ticker:hover .ticker-track{animation-play-state:paused}
+.ticker-track span{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:13px;letter-spacing:.14em;
+  color:var(--teal);white-space:nowrap;
+  padding:0 22px;display:flex;align-items:center;
+}
+.ticker-track span::after{
+  content:'+';color:var(--apricot);
+  margin-left:22px;font-weight:700;
+}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
 /* Buttons */
 .btn{
   display:inline-block;
@@ -126,7 +197,7 @@ nav a:hover::after{width:100%}
 
 /* Hero */
 .hero{
-  padding:84px 0 64px;
+  padding:56px 0 64px;
   background:var(--gradient-hero);
   position:relative;
   overflow:hidden;
@@ -514,6 +585,23 @@ footer.site .disc{
     </nav>
   </div>
 </header>
+
+<!-- ===== ВИТРИНА: БАННЕР «ДОБРО ПОЖАЛОВАТЬ» ===== -->
+<div class="hero-banner">
+  <img src="assets/img/hero-banner.jpg" alt="LALI — добро пожаловать: помощник Сергей на связи" fetchpriority="high">
+  <div class="banner-shade"></div>
+  <a class="scroll-hint" href="#about" aria-label="Листайте вниз">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </a>
+</div>
+
+<!-- ===== БЕГУЩАЯ СТРОКА НАПРАВЛЕНИЙ ===== -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>ОСТЕОПАТИЧЕСКОЕ СОПРОВОЖДЕНИЕ</span><span>ОНКОЛОГИЯ ВСЕХ ФОРМ И СТАДИЙ</span><span>ДЕТСКАЯ ОНКОЛОГИЯ</span><span>САРКОМЫ · МЕЛАНОМЫ</span><span>ЗПР · РАС · ДЦП · СДВГ</span><span>ОСАНКА И СКОЛИОЗ</span><span>СОН И НЕРВНАЯ СИСТЕМА</span><span>ЛИЦЕНЗИЯ DOH-MD-2020-847392</span>
+    <span>ОСТЕОПАТИЧЕСКОЕ СОПРОВОЖДЕНИЕ</span><span>ОНКОЛОГИЯ ВСЕХ ФОРМ И СТАДИЙ</span><span>ДЕТСКАЯ ОНКОЛОГИЯ</span><span>САРКОМЫ · МЕЛАНОМЫ</span><span>ЗПР · РАС · ДЦП · СДВГ</span><span>ОСАНКА И СКОЛИОЗ</span><span>СОН И НЕРВНАЯ СИСТЕМА</span><span>ЛИЦЕНЗИЯ DOH-MD-2020-847392</span>
+  </div>
+</div>
 
 <div class="wrap hero">
   <i class="cross" style="top:16%;left:4%">+</i>
